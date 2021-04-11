@@ -1,0 +1,15 @@
+@import "./variables";
+
+.hero{
+    height: $desktopHeight;
+    width: $desktopWidth;
+    background-image: url("../images/image-hero-desktop.jpg");
+}
+
+@media (max-width: $mobileWidth){
+    .hero{
+        height: $mobileHeight;
+        width: $mobileWidth;
+        background-image: url("../images/image-hero-mobile.jpg");
+    }
+}
