@@ -3,13 +3,102 @@
 .hero{
     height: $desktopHeight;
     width: $desktopWidth;
-    background-image: url("../images/image-hero-desktop.jpg");
+    background: linear-gradient( rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3) ), url("../images/image-hero-desktop.jpg");
+
+    .nav {
+        height: 25%;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        padding-top: 50px;
+        padding-left: 165px;
+        padding-right: 147px;
+
+        .nav-links {
+            height: 20px;
+            width: 250px;
+            display: flex;
+            justify-content: space-between;
+
+            li{
+                list-style: none;
+            }
+
+            a{
+                font-family: $font;
+                font-size: $fontSize;
+                text-decoration: none;
+                color: white;
+            }
+        }
+
+        .mobile-menu {
+            display: none;
+        }
+    }
 }
 
 @media (max-width: $mobileWidth){
     .hero{
         height: $mobileHeight;
         width: $mobileWidth;
-        background-image: url("../images/image-hero-mobile.jpg");
+        background: linear-gradient( rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3) ), url("../images/image-hero-mobile.jpg");
+
+        .nav{
+            padding-left: 20px;
+            padding-right: 20px;
+
+            .nav-links.inactive{
+                display: none;
+            }
+
+            .nav-links.active {
+                position: absolute;
+                left: auto;
+                right: auto;
+                flex-direction: column;
+                height: 175px;
+                width: 335px;
+                margin-top: 50px;
+                background: white;
+                color: $black;
+                border-radius: 10px;
+
+                li{
+                    $liHeight: calc(175px / 3);
+                    height: $liHeight;
+                    display: flex;
+                    justify-content: left;
+                    align-items: center;
+                    padding-left: 25px;
+                    border-bottom: 0.5px solid rgb(228, 228, 228);
+
+                    a{
+                        color: $black;
+                    }
+
+                    a:hover{
+                        color: $primaryColor;
+                    }
+                }
+
+                li:last-child{
+                    border-bottom: none;
+                }
+            }
+
+            .mobile-menu{
+                display: flex;
+                justify-content: right;
+                align-items: center;
+                font-size: 30px;
+                background: transparent;
+                border: none;
+                cursor: pointer;
+                outline: none;
+                height: 25px;
+                width: 50px;
+            }
+        }
     }
 }
