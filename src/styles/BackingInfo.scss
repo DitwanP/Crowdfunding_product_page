@@ -5,10 +5,114 @@
     width: 50%;
     height: 200px;
     border-radius: 8px;
-    position: relative;
-    bottom: 7%;
+    margin-top: 25px;
     display: flex;
     flex-direction: column;
+    justify-content: center;
     align-items: center;
-    margin-top: 25px;
+
+    .inner-container{
+        width: 90%;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+        margin-bottom: 30px;
+    }
+
+    h3{
+        font-size: 30px;
+        font-family: $font;
+        font-weight: 700;
+        margin-bottom: 8px;
+    }
+
+    h4{
+        font-size: 14px;
+        font-family: $font;
+        font-weight: 400;
+        color: $darkGray;
+    }
+
+    .money-raised{
+        width: 100%;
+    }
+
+    .backers{
+        width: 100%;
+        border-left: 1px solid rgb(177, 177, 177);
+        padding-left: 40px;
+    }
+
+    .remaining-time{
+        width: 100%;
+        border-left: 1px solid rgb(177, 177, 177);
+        padding-left: 40px;
+    }
+
+    .progress-bar{
+        height: 10px;
+        width: 90%;
+        border-radius: 10px;
+        background-color: rgb(228, 228, 228);
+
+        .bar-fill{
+            border-radius: inherit;
+            background-color: $primaryColor;
+            height: 100%;
+            width: 90%;
+        }
+    }
+}
+
+@media (max-width: $mobileWidth){
+    .backing-info{
+        width: 85%;
+        height: auto;
+        
+        .inner-container{
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+
+            .money-raised{
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                align-items: center;
+                margin-top: 40px;
+                margin-bottom: 30px;
+            }
+
+            .backers{
+                width: 50%;
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                align-items: center;
+                padding-left: 0;
+                padding-top: 30px;
+                padding-bottom: 30px;
+                border-left: none;
+                border-top: 1px solid rgb(177, 177, 177);
+            }
+
+            .remaining-time{
+                width: 50%;
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                align-items: center;
+                padding-left: 0;
+                padding-top: 30px;
+                border-left: none;
+                border-top: 1px solid rgb(177, 177, 177);
+            }
+        }
+
+        .progress-bar{
+            width: 85%;
+            margin-bottom: 40px;
+        }
+    }
 }
