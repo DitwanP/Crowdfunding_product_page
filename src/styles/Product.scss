@@ -73,8 +73,222 @@
             }
         }
 
+        .bookmark-button-active {
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+            height: 100%;
+            width: 28%;
+            outline: none;
+            border: none;
+            border-radius: 40px;
+            background-color: $primaryColor;
+            color: rgb(255, 255, 255);
+
+            .bookmark-svg {
+                margin-right: 15px;
+            }
+
+            .bookmark-text {
+                font-size: 14px;
+                font-weight: 700;
+            }
+        }
+
         .bookmark-button:hover {
             scale: 1.03;
+        }
+    }
+
+    .backing-modal {
+        position: absolute;
+        display: flex;
+        justify-content: center;
+
+        .modal-main{
+            background-color: white;
+            width: 70%;
+            border-radius: 8px;
+            margin-top: 25px;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            font-family: $font;
+        
+            .inner-container{
+                width: 90%;
+                display: flex;
+                flex-direction: column;
+                margin-bottom: 30px;
+                
+                .title-and-close-button{
+                    display: flex;
+                    justify-content: space-between;
+
+                    .section-title{
+                        font-size: 20px;
+                        font-weight: 700;
+                        margin-top: 40px;
+                        margin-bottom: 30px;
+                    }
+
+                    .close-modal-button{
+                        background: none;
+                        border: none;
+                        outline: none;
+                        position: relative;
+                        bottom: 15px;
+                        left: 5px;
+                    }
+
+                    .close-modal-button:hover{
+                        cursor: pointer;
+                        scale: 1.2;
+                    }
+                }
+        
+                .product-description{
+                    font-size: 16px;
+                    color: rgb(109, 109, 109);
+                    line-height: 25px;
+                    margin-bottom: 40px;
+                }
+        
+                .backing-options{
+                    width: 100%;
+                    border: 1px solid rgb(206, 206, 206);
+                    border-radius: 10px;
+                    margin-bottom: 25px;
+                    padding: 20px;
+                    display: flex;
+                    align-items: center;
+
+                    .checkbox-container{
+                        height: 100%;
+                        margin-right: 20px;
+                        display: flex;
+                        flex-direction: column;
+                        justify-content: flex-start;
+                        position: relative;
+
+                        .custom-checkbox{
+                            height: 20px;
+                            width: 20px;
+                            cursor: pointer;
+
+                            input{
+                                display: none;
+                            }
+
+                            input:checked + .checkbox-fill{
+                                background-color: $primaryColor;
+                            }
+
+                            .checkbox-fill{
+                                width: 100%;
+                                height: 100%;
+                                border-radius: 50%;
+                                border: 1px solid rgb(162, 162, 162);
+                                display: flex;
+                                justify-content: center;
+                                align-items: center;
+                            }
+                        }
+                    }
+        
+                    .content{
+                        display: flex;
+                        flex-direction: column;
+        
+                        .option-title{
+                            font-size: 18px;
+                            margin-bottom: 20px;
+                        }
+
+                        .option-description{
+                            font-size: 14px;
+                        }
+        
+                        .option-price{
+                            font-size: 14px;
+                            font-weight: 500;
+                            color: $primaryColor;
+                        }
+                    }
+        
+                    .option-description{
+                        font-size: 16px;
+                        color: rgb(109, 109, 109);
+                        line-height: 25px;
+                        margin-bottom: 25px;
+                    }
+        
+                    .remaining-and-select-button{
+                        display: none;
+                        flex-direction: row;
+                        justify-content: space-between;
+                        height: 45px;
+        
+                        .amount-remaining{
+                            font-size: 28px;
+                            font-weight: 700;
+                            display: flex;
+                            justify-content: center;
+                            align-items: center;
+                        }
+        
+                        .amount-remaining::after{
+                            font-size: 14px;
+                            font-weight: 500;
+                            content: "left";
+                            color: rgb(109, 109, 109);
+                            margin-left: 8px;
+                        }
+        
+                        .option-select{
+                            height: 100%;
+                            width: 25%;
+                            outline: none;
+                            border: none;
+                            border-radius: 40px;
+                            background-color: $primaryColor;
+                            color: white;
+                            font-size: 12px;
+                            font-weight: 700;
+                        }
+                    }
+                }
+        
+                .backing-options:last-child{
+        
+                    .title-and-price{
+                        .option-title{
+                            filter: contrast(0%);
+                        }
+        
+                        .option-price{
+                            filter: opacity(50%);
+                        }
+                    }
+        
+                    .option-description{
+                        filter: opacity(50%);
+                    }
+        
+                    .remaining-and-select-button{
+                        display: none;
+
+                        .amount-remaining{
+                            filter: contrast(0%);
+                        }
+        
+                        .option-select{
+                            filter: grayscale(100%);
+                        }
+                    }
+                }
+            }
         }
     }
 }
