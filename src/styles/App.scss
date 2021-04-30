@@ -16,10 +16,11 @@ html{
     display: flex;
     flex-direction: column;
     align-items: center;
+    background: #1c1c1c;
 }
 
 .index{
-    background: rgb(245, 245, 245);
+    background: #1c1c1c;
     max-width: $desktopWidth;
     display: flex;
     flex-direction: column;

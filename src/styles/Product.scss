@@ -1,7 +1,7 @@
 @import "./variables";
 
 .product {
-    background-color: white;
+    background-color: $dullwhite;
     width: 50%;
     height: 250px;
     border-radius: 8px;
@@ -24,7 +24,7 @@
         font-family: $font;
         font-size: $fontSize;
         font-weight: 400;
-        color: $darkGray;
+        color: rgb(58, 58, 58);
         margin-bottom: 40px;
     }
 
@@ -42,12 +42,14 @@
             border: none;
             border-radius: 40px;
             background-color: $primaryColor;
-            color: white;
+            color: rgb(56, 56, 56);
             font-weight: 500;
         }
 
         .back-project-button:hover {
             background-color: $primaryColorDark;
+            color: white;
+            cursor: pointer;
             scale: 1.03;
         }
 
@@ -60,8 +62,8 @@
             outline: none;
             border: none;
             border-radius: 40px;
-            background-color: rgb(228, 228, 228);
-            color: rgb(109, 109, 109);
+            background-color: rgb(208, 208, 208);
+            color: rgb(79, 79, 79);
 
             .bookmark-svg {
                 margin-right: 15px;
@@ -96,6 +98,7 @@
         }
 
         .bookmark-button:hover {
+            cursor: pointer;
             scale: 1.03;
         }
     }

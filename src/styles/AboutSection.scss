@@ -1,7 +1,7 @@
 @import "./variables";
 
 .about-main{
-    background-color: white;
+    background-color: $dullwhite;
     width: 50%;
     border-radius: 8px;
     margin-top: 25px;
@@ -26,7 +26,7 @@
 
         .product-description{
             font-size: 16px;
-            color: rgb(109, 109, 109);
+            color: rgb(58, 58, 58);
             line-height: 25px;
             margin-bottom: 40px;
         }
@@ -34,7 +34,7 @@
         .backing-options{
             height: 225px;
             width: 100%;
-            border: 1px solid rgb(206, 206, 206);
+            border: 1px solid rgb(82, 82, 82);
             border-radius: 10px;
             margin-bottom: 25px;
             padding: 30px;
@@ -52,13 +52,13 @@
                 .option-price{
                     font-size: 14px;
                     font-weight: 500;
-                    color: $primaryColor;
+                    color: $primaryColorDark;
                 }
             }
 
             .option-description{
                 font-size: 16px;
-                color: rgb(109, 109, 109);
+                color: rgb(58, 58, 58);
                 line-height: 25px;
                 margin-bottom: 25px;
             }
@@ -92,7 +92,7 @@
                     border: none;
                     border-radius: 40px;
                     background-color: $primaryColor;
-                    color: white;
+                    color: rgb(72, 72, 72);
                     font-size: 12px;
                     font-weight: 700;
                 }
