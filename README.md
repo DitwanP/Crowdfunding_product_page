@@ -1,9 +1,10 @@
 # Frontend Mentor Crowdfunding Product Page Practice
 This was a simple page that was built to continue practicing html and css. I changed the desing to be a darker and also changed the primary color to something I though would be more fitting with the darker background.
 
-
+# Web
 ![image](https://user-images.githubusercontent.com/60022782/116746550-a617d600-a9ca-11eb-826e-a184985b1514.png)
 
+# Mobile
 
 # Getting Started with Create React App
 
